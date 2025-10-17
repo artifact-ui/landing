@@ -1,23 +1,37 @@
-import { Button, Heading, Text } from "@artifact-ui/core";
+import { Button, Text } from "@artifact-ui/core";
 import styles from "./page.module.css";
+import { Logo } from "./components/Logo";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.hero}>
-          <Heading size="8" className={styles.title}>artifact ui</Heading>
+          <Logo className={styles.logo} />
           <Text size="5" className={styles.subtitle}>
             Lightweight React components built on Radix primitives
           </Text>
           <div className={styles.ctas}>
-            <a href="https://storybook.artifact-ui.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://storybook.artifact-ui.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="default" color="primary" size="3">
                 View Documentation
               </Button>
             </a>
-            <a href="https://www.npmjs.com/package/@artifact-ui/core" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" color="neutral" size="3" className={styles.mono}>
+            <a
+              href="https://www.npmjs.com/package/@artifact-ui/core"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                color="neutral"
+                size="3"
+                className={styles.mono}
+              >
                 npm install @artifact-ui/core
               </Button>
             </a>

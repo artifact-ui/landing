@@ -21,6 +21,13 @@
 	gap: 2rem;
 }
 
+.logo {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	color: var(--color-text-default);
+}
+
 .title {
 	font-size: 4rem;
 	font-weight: 700;
