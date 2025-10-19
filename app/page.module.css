@@ -7,18 +7,16 @@
 .main {
 	flex: 1;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 2rem;
+	padding: var(--space-8);
+	gap: var(--space-16);
 }
 
 .hero {
 	max-width: 800px;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
 }
 
 .logo {
@@ -41,10 +39,7 @@
 }
 
 .ctas {
-	display: flex;
-	gap: 1rem;
 	flex-wrap: wrap;
-	justify-content: center;
 }
 
 .mono {
@@ -62,7 +57,12 @@
 
 	.ctas {
 		flex-direction: column;
+		align-items: center;
 		width: 100%;
 		max-width: 300px;
+	}
+
+	.ctas a {
+		width: 100%;
 	}
 }

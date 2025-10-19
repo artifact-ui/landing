@@ -1,0 +1,38 @@
+.features {
+	max-width: 1200px;
+	padding: 0 var(--space-4);
+}
+
+.featuresTitle {
+	text-align: center;
+}
+
+.featuresGrid {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.feature {
+	text-align: center;
+}
+
+.featureIcon {
+	width: 2.5rem;
+	height: 2.5rem;
+	color: var(--color-text-primary);
+}
+
+.featureTitle {
+	margin: 0;
+}
+
+@media (max-width: 1024px) {
+	.featuresGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.featuresGrid {
+		grid-template-columns: 1fr;
+	}
+}

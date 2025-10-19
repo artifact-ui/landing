@@ -1,17 +1,18 @@
-import { Button, Text } from "@artifact-ui/core";
+import { Button, Text, Stack, Flex } from "@artifact-ui/core";
 import styles from "./page.module.css";
-import { Logo } from "./components/Logo";
+import { Logo } from "./components/logo";
+import { FeatureGrid } from "./components/feature/feature-grid";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div className={styles.hero}>
+        <Stack gap="8" align="center" className={styles.hero}>
           <Logo className={styles.logo} />
           <Text size="5" className={styles.subtitle}>
             Lightweight React components built on Radix primitives
           </Text>
-          <div className={styles.ctas}>
+          <Flex gap="3" justify="center" className={styles.ctas}>
             <a
               href="https://storybook.artifact-ui.com"
               target="_blank"
@@ -35,8 +36,10 @@ export default function Home() {
                 npm install @artifact-ui/core
               </Button>
             </a>
-          </div>
-        </div>
+          </Flex>
+        </Stack>
+
+        <FeatureGrid />
       </main>
     </div>
   );
