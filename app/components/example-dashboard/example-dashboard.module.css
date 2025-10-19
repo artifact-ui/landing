@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.dashboardExpanded {
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
   .bottomGrid {
     grid-template-columns: 1fr;

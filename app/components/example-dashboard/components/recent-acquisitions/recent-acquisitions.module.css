@@ -34,6 +34,10 @@
   color: var(--color-constant-white);
 }
 
+.artifactMenu:hover {
+  background-color: transparent;
+}
+
 @media (max-width: 1024px) {
   .artifactsGrid {
     grid-template-columns: repeat(2, 1fr);

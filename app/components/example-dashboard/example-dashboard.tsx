@@ -1,6 +1,6 @@
 "use client";
 
-import { Stack, Grid } from "@artifact-ui/core";
+import { Stack, Grid, cn } from "@artifact-ui/core";
 import { DashboardHeader } from "./components/dashboard-header/dashboard-header";
 import { StatsGrid } from "./components/stats-grid/stats-grid";
 import { RecentAcquisitions } from "./components/recent-acquisitions/recent-acquisitions";
@@ -14,9 +14,16 @@ import {
 } from "./data/dashboard-data";
 import styles from "./example-dashboard.module.css";
 
-export function ExampleDashboard() {
+interface ExampleDashboardProps {
+  expanded?: boolean;
+}
+
+export function ExampleDashboard({ expanded = false }: ExampleDashboardProps) {
   return (
-    <Stack gap="8" className={styles.dashboard}>
+    <Stack
+      gap="8"
+      className={cn(styles.dashboard, expanded && styles.dashboardExpanded)}
+    >
       <DashboardHeader />
       <StatsGrid stats={stats} />
       <RecentAcquisitions artifacts={recentArtifacts} />
