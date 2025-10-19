@@ -1,0 +1,11 @@
+.statusBadge {
+  margin-left: auto;
+}
+
+.coloredHeader {
+  background-color: var(--color-primary-surface);
+}
+
+.coloredHeader h2 {
+  color: var(--color-constant-white);
+}

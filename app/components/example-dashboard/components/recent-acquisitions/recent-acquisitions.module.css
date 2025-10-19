@@ -1,0 +1,47 @@
+.artifactsGrid {
+}
+
+.artifactImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0;
+  position: relative;
+}
+
+.artifactImage::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to top, black, transparent);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.artifactImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artifactMenu {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  color: var(--color-constant-white);
+}
+
+@media (max-width: 1024px) {
+  .artifactsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .artifactsGrid {
+    grid-template-columns: 1fr;
+  }
+}
