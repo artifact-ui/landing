@@ -100,7 +100,7 @@ export function ThemeControls() {
             <Stack gap="6">
               <div>
                 <Heading size="3">Accent Color</Heading>
-                <Flex gap="2" style={{ marginTop: "var(--space-3)" }}>
+                <Flex gap="2" className={styles.accentGrid} style={{ marginTop: "var(--space-3)" }}>
                   {accents.map((accent) => (
                     <button
                       key={accent.value}

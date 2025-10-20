@@ -16,6 +16,7 @@ import { Logo } from "./components/logo";
 import { FeatureGrid } from "./components/feature/feature-grid";
 import { ExampleDashboard } from "./components/example-dashboard/example-dashboard";
 import { ThemeControls } from "./components/theme-controls/theme-controls";
+import { Footer } from "./components/footer/footer";
 
 export default function Home() {
   const [dashboardExpanded, setDashboardExpanded] = useState(false);
@@ -103,6 +104,8 @@ export default function Home() {
 
         <FeatureGrid />
       </main>
+
+      <Footer />
 
       <ThemeControls />
     </div>

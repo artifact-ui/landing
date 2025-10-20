@@ -14,7 +14,7 @@
 .accentSwatch {
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-2);
+  border-radius: var(--radius-default);
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -26,16 +26,7 @@
 }
 
 .accentSwatch[data-selected="true"] {
-  border-color: var(--color-text-primary);
-  box-shadow: 0 0 0 2px var(--color-bg-default);
-}
-
-.accentSwatch[data-selected="true"]::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-2);
-  border: 2px solid var(--color-text-primary);
+  border-color: var(--color-primary-emphasis);
 }
 
 .accentSwatch[data-accent="obsidian"] {
@@ -76,4 +67,26 @@
 
 .accentSwatch[data-accent="crimson"] {
   background-color: #cc3342;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    max-width: 90vw;
+    width: 90vw;
+  }
+
+  .accentGrid {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .accentSwatch {
+    width: 44px;
+    height: 44px;
+  }
+
+  .floatingButton {
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
 }

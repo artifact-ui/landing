@@ -18,7 +18,7 @@
   max-width: 1400px;
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 0;
+  gap: var(--space-4);
   position: relative;
   transition: grid-template-columns 0.4s ease;
 }
@@ -35,9 +35,9 @@
   text-align: left;
   padding: 0 var(--space-8) 0 var(--space-8);
   padding-top: 20vh;
-  z-index: 2;
+  z-index: 1000;
   min-height: 100vh;
-  min-width: 600px;
+  min-width: 625px;
   transition: opacity 0.3s ease;
   overflow: hidden;
 }
@@ -148,8 +148,26 @@
     display: none;
   }
 
+  .expandButton {
+    display: none;
+  }
+
   .heroContent {
-    padding: var(--space-4);
+    padding: var(--space-8) var(--space-4);
+    padding-top: var(--space-12);
+    min-width: unset;
+    min-height: unset;
+    text-align: center;
+    align-items: center;
+  }
+
+  .subtitle {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 300px;
   }
 }
 
@@ -162,11 +180,18 @@
     font-size: 1.25rem;
   }
 
+  .heroContent {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .logo {
+    max-width: 250px;
+  }
+
   .ctas {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
-    max-width: 300px;
   }
 
   .ctas a {

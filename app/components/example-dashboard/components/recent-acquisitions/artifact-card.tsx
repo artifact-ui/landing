@@ -20,7 +20,7 @@ export function ArtifactCard({ title, period, image }: ArtifactCardProps) {
   return (
     <Card.Root shadow="paper">
       <div className={styles.artifactImage}>
-        <Image src={image} alt={title} width={400} height={300} />
+        <Image src={image} alt={title} width={400} height={300} priority />
         <DropdownMenu.DropdownMenu>
           <DropdownMenu.DropdownMenuTrigger asChild>
             <IconButton
