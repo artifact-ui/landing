@@ -1,0 +1,28 @@
+.footer {
+  background-color: var(--gray-800);
+  color: var(--gray-300);
+  padding: var(--space-8) 0;
+  margin-top: var(--space-16);
+  border-top: 1px solid var(--gray-700);
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.footerText {
+  color: var(--gray-400);
+}
+
+.footerLink {
+  color: var(--gray-400);
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.footerLink:hover {
+  color: var(--gray-200);
+}

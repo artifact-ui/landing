@@ -1,0 +1,92 @@
+.floatingButton {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15),
+    0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modalContent {
+  max-width: 500px;
+}
+
+.accentSwatch {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-default);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.accentSwatch:hover {
+  transform: scale(1.1);
+}
+
+.accentSwatch[data-selected="true"] {
+  border-color: var(--color-primary-emphasis);
+}
+
+.accentSwatch[data-accent="obsidian"] {
+  background-color: #4b5563;
+}
+
+.accentSwatch[data-accent="sage"] {
+  background-color: #267557;
+}
+
+.accentSwatch[data-accent="twilight"] {
+  background-color: #897daa;
+}
+
+.accentSwatch[data-accent="canopy"] {
+  background-color: #5b7448;
+}
+
+.accentSwatch[data-accent="blush"] {
+  background-color: #a75b5b;
+}
+
+.accentSwatch[data-accent="patina"] {
+  background-color: #1d8476;
+}
+
+.accentSwatch[data-accent="meridian"] {
+  background-color: #1a6aaf;
+}
+
+.accentSwatch[data-accent="clay"] {
+  background-color: #ba5f3c;
+}
+
+.accentSwatch[data-accent="amber"] {
+  background-color: #af711f;
+}
+
+.accentSwatch[data-accent="crimson"] {
+  background-color: #cc3342;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    max-width: 90vw;
+    width: 90vw;
+  }
+
+  .accentGrid {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .accentSwatch {
+    width: 44px;
+    height: 44px;
+  }
+
+  .floatingButton {
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
+}
