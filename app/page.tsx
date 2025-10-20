@@ -12,7 +12,7 @@ import {
 } from "@artifact-ui/core";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import styles from "./page.module.css";
-import { Logo } from "./components/logo";
+import { Logo } from "./components/artifact-logo";
 import { FeatureGrid } from "./components/feature/feature-grid";
 import { ExampleDashboard } from "./components/example-dashboard/example-dashboard";
 import { ThemeControls } from "./components/theme-controls/theme-controls";
