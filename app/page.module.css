@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0 var(--space-8) var(--space-8) var(--space-8);
-  gap: var(--space-16);
+  gap: var(--space-8);
 }
 
 .heroSection {
@@ -40,6 +40,10 @@
   min-width: 625px;
   transition: opacity 0.3s ease;
   overflow: hidden;
+}
+
+.heroContent > * {
+  align-items: flex-start;
 }
 
 .heroContentHidden {
@@ -130,9 +134,9 @@
 }
 
 .expandButton {
-  position: absolute;
+  position: fixed;
   top: var(--space-6);
-  right: 0;
+  right: var(--space-6);
   z-index: 10000;
   background-color: var(--color-bg-default);
   box-shadow: var(--shadow-spread);
@@ -158,6 +162,10 @@
     min-width: unset;
     min-height: unset;
     text-align: center;
+    align-items: center;
+  }
+
+  .heroContent > * {
     align-items: center;
   }
 

@@ -35,7 +35,7 @@ export default function Home() {
               dashboardExpanded && styles.heroContentHidden
             )}
           >
-            <Stack gap="8" align="start">
+            <Stack gap="8">
               <Logo className={styles.logo} />
               <Text size="5" className={styles.subtitle}>
                 Lightweight React components built on Radix primitives

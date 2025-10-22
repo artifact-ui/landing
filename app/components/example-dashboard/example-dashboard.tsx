@@ -24,7 +24,7 @@ export function ExampleDashboard({ expanded = false }: ExampleDashboardProps) {
       gap="8"
       className={cn(styles.dashboard, expanded && styles.dashboardExpanded)}
     >
-      <DashboardHeader />
+      <DashboardHeader expanded={expanded} />
       <StatsGrid stats={stats} />
       <RecentAcquisitions artifacts={recentArtifacts} />
       <Grid columns={2} gap="4" className={styles.bottomGrid}>
