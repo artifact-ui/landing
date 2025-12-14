@@ -10,7 +10,7 @@ import {
   Heading,
   Tooltip,
 } from "@artifact-ui/core";
-import { Settings } from "lucide-react";
+import { Check, Settings } from "lucide-react";
 import styles from "./theme-controls.module.css";
 
 const accents = [
@@ -36,6 +36,8 @@ const radiusOptions = [
 const themeOptions = [
   { value: "light", label: "Light" },
   { value: "dark", label: "Dark" },
+  { value: "slate", label: "Slate" },
+  { value: "canvas", label: "Canvas" },
   { value: "system", label: "System" },
 ] as const;
 
@@ -100,7 +102,11 @@ export function ThemeControls() {
             <Stack gap="6">
               <div>
                 <Heading size="3">Accent Color</Heading>
-                <Flex gap="2" className={styles.accentGrid} style={{ marginTop: "var(--space-3)" }}>
+                <Flex
+                  gap="2"
+                  className={styles.accentGrid}
+                  style={{ marginTop: "var(--space-3)" }}
+                >
                   {accents.map((accent) => (
                     <button
                       key={accent.value}
@@ -109,7 +115,12 @@ export function ThemeControls() {
                       data-accent={accent.value}
                       data-selected={currentAccent === accent.value}
                       aria-label={accent.label}
-                    />
+                      aria-pressed={currentAccent === accent.value}
+                    >
+                      {currentAccent === accent.value && (
+                        <Check size={20} color="white" aria-hidden="true" />
+                      )}
+                    </button>
                   ))}
                 </Flex>
               </div>
@@ -126,6 +137,7 @@ export function ThemeControls() {
                       }
                       color="neutral"
                       size="2"
+                      aria-pressed={currentRadius === radius.value}
                     >
                       {radius.label}
                     </Button>
@@ -135,7 +147,10 @@ export function ThemeControls() {
 
               <div>
                 <Heading size="3">Theme</Heading>
-                <Flex gap="2" style={{ marginTop: "var(--space-3)" }}>
+                <Flex
+                  gap="2"
+                  style={{ marginTop: "var(--space-3)", flexWrap: "wrap" }}
+                >
                   {themeOptions.map((theme) => (
                     <Button
                       key={theme.value}
@@ -145,6 +160,7 @@ export function ThemeControls() {
                       }
                       color="neutral"
                       size="2"
+                      aria-pressed={currentTheme === theme.value}
                     >
                       {theme.label}
                     </Button>
